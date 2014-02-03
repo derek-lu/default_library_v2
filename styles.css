@@ -1,0 +1,1023 @@
+body {
+    font-family: Helvetica Neue;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body, #archive-grid, #sections-grid {
+    background-color: #323232;;
+}
+
+#banner {
+    margin: 46px 0px 0px 0px;
+    height: 140px;
+    display: block;
+}
+
+/* The black header at the top. */
+#header {
+    background-color: #242524;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 46px;
+    position: fixed;
+    z-index: 7;
+    display: table;
+    padding: 0px;
+    top: 0px;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+#print-subscriber-login, #subscribe  {
+    float: left;
+    font-size: 13px;
+    font-weight: bold;
+    margin-right: 10px;
+    padding-top: 13px;
+    margin-left: 15px;
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+#header-left-column-container {
+    width: 200px;
+    height: 46px;
+    float: left;
+    display: inline-block;
+    position: absolute;
+}
+
+#header-right-column-container {
+    width: 200px;
+    float: right;
+    display: inline-block;
+    text-align: right;
+}
+
+#title, #spinner-title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    width: 400px;
+    display: block;
+    margin: auto;
+    padding-top: 14px;
+}
+
+#title-image {
+    display:block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.archive-view, .sections-view {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 8;
+}
+
+#archive-grid, #sections-grid {
+    padding-top: 81px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+#archive-view-msg {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+#archive-view-left-column, #sections-view-left-column {
+    float: left;
+    display: inline-block;
+    width: 200px;
+}
+
+#archive-view-right-column, #sections-view-right-column {
+    float: right;
+    display: inline-block;
+    margin-right: 10px;
+    width: 200px;
+    text-align: right;
+}
+
+.archive-view #title, .sections-view #title {
+    position: absolute;
+    margin-left:auto;
+    margin-right:auto;
+    left:0;
+    right:0;
+}
+
+.archive-view .button, .sections-view .button {
+    width: 75px;
+    height: 16px;
+    padding: 5px;
+    display: inline-block;
+    margin: 10px 0px 0px 10px;
+}
+
+.sections-view .button {
+    width: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.archive-view-selected {
+    border: 2px solid #B52517;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+}
+
+.archive-view-selected-check-icon-container {
+    border: 2px solid #ffffff;
+    background-color: #B31B18;
+    -webkit-border-radius:16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 21px;
+    height: 20px;
+    padding: 8px 0px 0px 7px;
+}
+
+.archive-view-selected-check-icon {
+    background: url("images/icon_check.png") no-repeat;
+    background-size: 16px 12px;
+    width: 16px;
+    height: 12px;
+}
+
+/* The text link to display more folios in grid view. */
+#show-more {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 10px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+    clear: both;
+    white-space: none;
+    display: none;
+}
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 1px;
+}
+
+#header-drop-down {
+    float: right;
+    margin-left: 15px;
+    display: inline;
+    position: absolute;
+    right: -15px;
+    top: 2px;
+}
+
+.button {
+    font-weight: bold;
+    font-size: 12px;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 7px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+    -webkit-user-select: none;
+    cursor: default;
+}
+
+.button.disabled {
+    opacity: .5;
+    color: #aaaaaa;
+}
+
+.grey-button {
+    width: 90px;
+    height: 15px;
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255, 255, 255, .2);
+    background-color:#595b5b;
+    -webkit-border-radius:6px;
+    border:1px solid #333333;
+    color:#ffffff;
+    padding:7px 3px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.grey-button:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px rgba(255, 255, 255, .2);
+}
+
+.red-button {
+    width: 90px;
+    height: 15px;
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255, 255, 255, .2);
+    background-color:#B31B18;
+    -webkit-border-radius:6px;
+    border:1px solid #333333;
+    color:#ffffff;
+    padding:7px 3px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.red-button:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px rgba(255, 255, 255, .2);
+}
+
+.grey-button-small {
+    width: 70px;
+    height: 15px;
+    float: left;
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255, 255, 255, .2);
+    background-color:#595b5b;
+    -webkit-border-radius:6px;
+    border:1px solid #333333;
+    color:#ffffff;
+    padding:7px 3px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.grey-button-small:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px rgba(255, 255, 255, .2);
+}
+
+.black-button-small {
+    width: 70px;
+    height: 15px;
+    display: none;
+    float: left;
+    -webkit-box-shadow:inset 1px 1px 0px 0px rgba(255, 255, 255, .2);
+    background-color:#393939;
+    -webkit-border-radius:6px;
+    border:1px solid #333333;
+    color:#ffffff;
+    padding:7px 3px;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.black-button-small:active {
+    -webkit-box-shadow:inset -1px -1px 0px 0px rgba(255, 255, 255, .2);
+}
+
+#edit-button {
+    white-space:nowrap;
+    float: right;
+    margin-top: 8px;
+}
+
+.toggle-button {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 6px;
+    width: 69px;
+    height: 26px;
+}
+
+/* The icon to open the drop down. */
+.drop-down {
+    background: url("images/settings_icon.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    background-size: 25px 25px;
+}
+
+.drop-down div {
+    display: none;
+}
+
+.drop-down-menu {
+    position: absolute;
+    z-index: 10;
+}
+
+.drop-down-menu-background {
+    -webkit-box-shadow: 0px 3px 40px rgba(0,0,0,0.4);
+    -webkit-border-radius: 8px;
+    background-color: #1A1A1A;
+    padding: 5px;
+    position: relative;
+    top: -4px;
+}
+
+.drop-down-menu-inner-background {
+    background-color: #4f4f4f;
+}
+
+.drop-down-menu-inner-background .item {
+    height: 28px;
+    padding: 12px 10px 0px 15px;
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.drop-down-menu-inner-background .selected {
+    background-color: #3E3E3E;
+    color: #33ccff;
+}
+
+.drop-down-menu-inner-background .item-disabled {
+    color: #999999;
+}
+
+.drop-down-menu-inner-background hr {
+    height: 1px;
+    color: #1a1a1a;
+    background-color: #1a1a1a;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.drop-down-menu-inner-background .flip-switch {
+    float: right;
+    position: relative;
+    top: -4px;
+}
+
+.drop-down-menu-inner-background .control-label {
+    padding-top: 3px;
+    float: left;
+}
+
+/* Horizontal switch with on/off states. */
+.flip-switch {
+    background: url("images/flip_switch_bg.png") no-repeat;
+    background-size: 135px 27px;
+    width: 90px;
+    height: 27px;
+    -webkit-transition: background-position .15s;
+}
+
+.magazine-title {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.folio-number {
+    color: #999999;
+    font-size: 14px;
+}
+
+/* Item renderer used to display an individual folio in the grid. */
+.folio-item-view {
+    float: left;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+    position: relative;
+    font-size: 14px;
+}
+
+.folio-item-view .folio-thumb {
+    visibility: hidden;
+}
+
+.folio-item-view .folio-number {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 120%;
+}
+
+.folio-item-view #buy-button, .folio-item-view #section-download-button {
+    position: absolute;
+    right: 0px;
+    width: 45px;
+    height: 15px;
+    padding: 5px;
+}
+
+.folio-item-view #section-download-button {
+    width: 20px;
+    height: 13px;
+}
+
+.folio-item-view #subscribe-button {
+    float: left;
+    position: relative;
+    left: -97px;
+    top: 40px;
+}
+
+.folio-item-view .download-status {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,.5);
+}
+
+.folio-item-view #toggle-download-button {
+    background-size: 20px 40px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.folio-item-view .cancel-download-button {
+    background: url("images/lib_cancel-normal@2x.png") no-repeat;
+}
+
+.folio-item-view .cancel-download-button:active, .folio-item-view .resume-download-button:active {
+    background-position: 0px -20px;
+}
+
+.folio-item-view .resume-download-button {
+    background: url("images/lib_resume-normal@2x.png") no-repeat;
+}
+
+/* Stretch out the "X" horizontally */
+.folio-item-view .cancel-download-button div {
+    -webkit-transform: scaleX(1.5);
+    padding: 3px 0px 0px 6px;
+    font-weight: normal;
+}
+
+.folio-item-view .magazine-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 120%;
+}
+
+.folio-item-view .state {
+    height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: 120%;
+    color: #33CCFF;
+}
+
+.folio-item-view .cloud-icon {
+    padding: 1px;
+    background: url("images/metadata_icon_cloud@2x.png") no-repeat;
+    background-size: 20px 13px;
+    width: 20px;
+    height: 13px; 
+    position: relative;
+    left: 13px;
+}
+
+.folio-item-view .section-cloud-icon {
+    left: 0px;
+}
+
+.folio-item-view .grey-button-small {
+    margin-left: 5px;
+}
+
+.progress-track {
+    background-color: #2a2a2a;
+    height: 6px;
+    left: 0px;
+    position: absolute;
+}
+
+.progress-track .progress-bar {
+    background-color: #33CCFF;
+    height: 6px;
+}
+
+.modal-background {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+}
+
+.modal-background-grey {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9;
+}
+
+#restore-dialog, #update-dialog {
+    margin-left: -127px;
+}
+
+/* Styles for the dialogs. */
+.dialog {
+    position: fixed;
+    width: 240px;
+    padding: 10px 10px 10px 10px;
+    z-index: 10;
+    background: rgba(10, 24, 59, .9);
+    color: #FFFFFF;
+    text-align: center;
+    border: 2px solid #DEE1E6;
+    -webkit-border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+    opacity: .92;
+    left: 50%;
+    top: 200px;
+}
+
+.dialog #title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align:left;
+    font-weight: bold;
+    text-align: center;
+    width: 330px;
+}
+
+.dialog #description {
+    font-size: 13px;
+    margin: 0px 0px 20px;
+    text-align:left;
+    text-align: center;
+    line-height: 120%;
+}
+
+.dialog button {
+    color: #fff;
+    width:110px;
+    height: 35px;
+    font-style: bold;
+    white-space: nowrap;
+    text-align: center;
+    font: bold 16px;
+    letter-spacing: 0.05em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #233854;
+    background: -webkit-gradient(linear, left top, left bottom, from(#969db0),to(#0A183B));
+    -webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .7);
+    padding: 0px;
+    margin: 0px 5px 0px 5px;
+    opacity: 1.0;
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+}
+
+.dialog button:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0A183B),to(#969db0));
+}
+
+#subscribe-dialog {
+    width: 330px;
+    margin-left: -177px;
+    top: 150px;
+}
+
+#subscribe-dialog #description {
+    text-align: left;
+}
+
+#subscribe-dialog .subscribe-button {
+    background: -webkit-gradient(linear, left top, left bottom, from(#eeeeee),to(#C5C6CE));
+    padding: 5px;
+    margin: 12px 2px 4px 1px;
+    color:#000000;
+    font-weight:bold;
+    font-size:16px;
+    border: 1px solid #CCC;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+    opacity: 1.0;
+    display:block;
+    width: 315px;
+    height: 21px;
+}
+
+#subscribe-dialog .subscribe-button:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#C5C6CE),to(#eeeeee));
+}
+
+#subscribe-dialog button {
+    color: #fff;
+    width:100%;
+    font: bold 16px;
+    letter-spacing: 0.05em;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #233854;
+    background: -webkit-gradient(linear, left top, left bottom, from(#969db0),to(#0A183B));
+    -webkit-box-shadow: 0px 1px 1px rgba(255,255,255, .7);
+    padding: 5px 25px;
+    min-width: 100px;
+    margin: 0;
+    opacity: 1.0;
+    margin-top: 15px;
+}
+
+#subscribe-dialog button:active {
+    background: -webkit-gradient(linear, left top, left bottom, from(#0A183B),to(#969db0));
+}
+
+/* The login dialog. */
+#login {
+    width: 410px;
+    position: absolute;
+    left: 50%;
+    margin-left: -210px;
+    top: 150px;
+    background-color: #333333;
+    -webkit-box-shadow: 0 0 20px rgba(0,0,0,.2);
+    color: #ffffff;
+}
+
+#login .title {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #272727;
+    height: 37px;
+    padding-top: 23px;
+}
+
+#login #close {
+    background: url("images/icon_close.png") no-repeat;
+    background-size: 50px 50px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 7px;
+    right: 12px;
+}
+
+#login .description {
+    font-size: 13px;
+    margin: 15px 0px 20px 20px;
+    color: #999999;
+}
+
+#login .link {
+    margin: 5px 0px 20px 20px;
+    color: #33CCFF;
+    text-decoration: none;
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+    -webkit-appearance: none;
+    background-color: #333433;
+    border-color: rgb(0,0,0);
+    border-style: solid;
+    border-width: 1px;
+    color: #ffffff;
+    font-size: 12px;
+    outline-color: black;
+    outline-style: none;
+    outline-width: 0px;
+    padding: 0px 4px 4px 4px;
+    margin-left: 20px;
+    width: 370px;
+    height: 31px;
+    -webkit-appearance: none;
+    margin: 0px 0px 15px 20px;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 12px;
+}
+
+#login .required {
+    position: relative;
+    top: -5px;
+    left: 3px;
+}
+
+#login #submit {
+    background: url("images/button_sign_in.png") no-repeat;
+    width: 370px;
+    height: 26px;
+    font-weight: bold;
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 10px
+}
+
+#login #submit:active {
+    background-position: 0px -36px;
+}
+
+#login .error {
+    color: rgb(255,0,0);
+    font-size: 13px;
+    font-weight: bold;
+    margin: 10px 10px 10px 20px;
+    height: 15px;
+}
+
+.form-button {
+    text-shadow: 0px 1px 0px rgb(0, 0, 0);
+    width:123px;
+    height:30px;
+    border-color:rgb(51,51,51);
+    border-width:1px;
+    border-radius:4%/12%;
+    border-style:solid;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    padding-top: 9px;
+}
+
+#loading {
+    margin: 20px 30px;
+    color: #ffffff;
+    text-shadow: 0px 1px 0px rgb(0,0,0);
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#preview-dialog-folio-cover {
+    position: relative;
+}
+
+#preview-dialog-close-button {
+    background-color:#000000;
+    -webkit-border-radius:16px;
+    border:3px solid #ffffff;
+    width: 19px;
+    height: 23px;
+    color: #ffffff;
+    position: absolute;
+    display: none;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 3px 0px 0px 7px;
+}
+
+#preview-dialog-content-container {
+    position: absolute;
+}
+
+/* entire container, keeps perspective */
+#preview-dialog-header-container {
+    -webkit-perspective: 1000;
+}
+
+#preview-dialog-header {
+    height: 98px;
+    -webkit-transform-origin: 100% 128px;
+    padding: 15px;
+    background-color: #333333;
+    -webkit-transform: rotateX(180deg);
+    -webkit-transition: .4s;
+    -webkit-transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    border:3px solid #000000;
+}
+
+#preview-dialog-header .magazine-title, #preview-dialog-header .folio-number {
+    font-weight: bold;
+}
+
+#preview-dialog-header-text-container {
+    float: left;
+    height: 100px;
+}
+
+#preview-dialog-header .description {
+    color: #999999;
+    font-size: 12;
+}
+
+#preview-dialog-header-button-container {
+    float: right;
+}
+
+#preview-dialog-header .button {
+    width: 80px;
+    height: 15px;
+    padding: 6px;
+    margin-bottom: 8px;
+}
+
+@media screen and (orientation:portrait) {
+    #banner {
+        background: url("images/entitlement_banner_portrait.png") no-repeat;
+        background-size: 768px 140px;
+        width: 768px;
+    }
+
+    #grid, #archive-grid, #sections-grid {
+        width: 768px;
+    }
+    
+    .folio-item-view {
+        width: 216px;
+        height: 367px;
+        margin-left: 30px;
+    }
+    
+    .folio-item-view #buy-button {
+        top: 303px;
+    }
+    
+    .folio-item-view #section-download-button {
+        top: 288px;
+    }
+    
+    .folio-item-view .text, .folio-item-view .folio-number, .folio-item-view .magazine-title, .folio-item-view .state {
+        width: 150px;
+    }
+    
+    .folio-item-view .download-status {
+        width: 216px;
+        height: 288px;
+    }
+    
+    /* The background track of the download status. */
+    .folio-item-view .progress-track {
+        width: 216px;
+        top: 282px;
+    }
+    
+    .folio-item-view .folio-thumb {
+        width: 216px;
+        height: 288px;
+        margin-bottom: 10px;
+    }
+
+    .folio-item-view #folio-section-shadow {
+        background: url("images/folio_section_shadow_portrait.png") no-repeat;
+        background-size: 10px 272px;
+        width: 10px;
+        height: 272px;
+        position: absolute;
+        left: 216px;
+        top: 8px;
+    }
+    
+    .folio-item-view #purchasing-spinner {
+        position: absolute;
+        right: 14px;
+        bottom: 57px;
+    }
+    
+    .folio-item-view #toggle-download-button {
+        right: 0px;
+        top: 303px;
+    }
+    
+    .archive-view-selected {
+        width: 216px;
+        height: 288px;
+    }
+    
+    #preview-dialog-folio-cover {
+        width: 488px;
+        height: 650px;
+        border:3px solid #000000;
+        top: -3px;
+    }
+
+    #preview-dialog-header {
+        width: 458px;
+    }
+    
+    #preview-dialog-header-text-container {
+        width: 355px;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    #banner {
+        background: url("images/entitlement_banner_landscape.png") no-repeat;
+        background-size: 1024px 140px;
+        width: 1024px;
+    }
+    
+    #grid, #archive-grid, #sections-grid {
+        width: 1024px;
+    }
+    
+    .folio-item-view {
+        width: 300px;
+        height: 285px;
+        margin-left: 30px;
+    }
+    
+    .folio-item-view #buy-button {
+        top: 240px;
+    }
+    
+     .folio-item-view #section-download-button {
+        top: 225px;
+    }
+    
+    .folio-item-view .text, .folio-item-view .folio-number, .folio-item-view .magazine-title, .folio-item-view .state {
+        width: 240px;
+    }
+    
+    .folio-item-view .download-status {
+        width: 300px;
+        height: 225px;
+    }
+    
+    /* The background track of the download status. */
+    .folio-item-view .progress-track {
+        width: 300px;
+        top: 219px;
+    }
+    
+    .folio-item-view .folio-thumb {
+        width: 168px;
+        height: 225px;
+        margin-bottom: 10px;
+    }
+
+    .folio-item-view #folio-section-shadow {
+        background: url("images/folio_section_shadow_landscape.png") no-repeat;
+        background-size: 10px 209px;
+        width: 10px;
+        height: 209px;
+        position: absolute;
+        left: 300px;
+        top: 8px;
+    }
+    
+    .folio-item-view #purchasing-spinner {
+        position: absolute;
+        right: 14px;
+        bottom: 40px;
+    }
+    
+    .folio-item-view #toggle-download-button {
+        right: 0px;
+        top: 240px;
+    }
+    
+    /* The folio preview is centered in this container. */
+    .folio-thumb-container {
+        width: 300px;
+        height: 225px;
+        background-color: #444444;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .archive-view-selected {
+        width: 300px;
+        height: 225px;
+    }
+    
+    #preview-dialog-folio-cover {
+        width: 326px;
+        height: 427px;
+    }
+
+    #preview-dialog-header {
+        width: 540px;
+    }
+    
+    #preview-dialod-folio-cover-container {
+        width: 570px;
+        height: 427px;
+        text-align: center;
+        background-color: #444444;
+        border: 3px solid #000000;
+        position: relative;
+        top: -3px;
+    }
+    
+    #preview-dialog-header-text-container {
+        width: 435px;
+    }
+}
+
+/* The grid view of folios. */
+#grid {
+    margin-top: 36px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* The styles for the debug textarea. This is commented out in appview. */
+.debug {
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+    opacity: .5;
+}
